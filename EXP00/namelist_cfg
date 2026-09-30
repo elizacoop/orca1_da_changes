@@ -18,7 +18,7 @@
 !-----------------------------------------------------------------------
    cn_exp      =  "ORCA1"  !  experience name
    nn_it000    =       1   !  first time step
-   nn_itend    =    4380   !  last  time step (std 5475)
+   nn_itend    =    17520   !  last  time step (std 5475)
    nn_istate   =       0   !  output the initial state (1) or not (0)
    nn_date0    =   19810101
 /
