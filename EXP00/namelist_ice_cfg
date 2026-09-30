@@ -25,9 +25,9 @@
   nlay_i           =  5              !  number of ice  layers
   nlay_s           =   3             !  number of snow layer
   !cn_icerst_in = "ORCA2_00000384_ens_ice_step24"   !  suffix of ice restart name (input)
-  !cn_icerst_out = "ens_ice_step25"   !  suffix of ice restart name (output)
+  cn_icerst_out = "orca1_ice_sp_end"   !  suffix of ice restart name (output)
   !cn_icerst_indir = "./restart_step24"             !  directory to read   input ice restarts
-  !cn_icerst_outdir = "./restart_step25"             !  directory to write output ice restarts
+  cn_icerst_outdir = "./orca1_spinup_end""             !  directory to write output ice restarts
 
 /
 !------------------------------------------------------------------------------
