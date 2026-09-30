@@ -100,6 +100,11 @@
    !                    !  bulk algorithm :
    ln_NCAR    = .true.     ! "NCAR"      algorithm   (Large and Yeager 2008)
 
+   !! Bulk transfer coefficients over sea-ice: (relevant IF:
+   ln_Cx_ice_cst = .false.     ! use constant ice-air bulk tr 
+   ln_Cx_ice_frm = .true.      ! use form drag param from Tsa
+
+
    cn_dir = '/work/n01/n01/elicoo/forcing_ensemble/inc_precip/spinup/'  !  root directory for the bulk data location
    !___________!_________________________!___________________!___________!_____________!________!___________!______________________________________!__________!_______________!
    !           !  file name              ! frequency (hours) ! variable  ! time interp.!  clim  ! 'yearly'/ !          weights filename            ! rotation ! land/sea mask !
@@ -314,7 +319,7 @@
 !-----------------------------------------------------------------------
 &namtra_eiv    !   eddy induced velocity param.                         (default: OFF)
 !-----------------------------------------------------------------------
-   ln_ldfeiv   = .false.    ! use eddy induced velocity parameterization
+   ln_ldfeiv   = .true.    ! use eddy induced velocity parameterization
       !                        !  Coefficients:
       nn_aei_ijk_t  = 21          ! space/time variation of the eiv coeficient
       !                                !   = 21 F(i,j,t)  =Treguier et al. JPO 1997 formulation

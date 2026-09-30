@@ -21,10 +21,23 @@
 !------------------------------------------------------------------------------
 &nampar         !   Generic parameters
 !------------------------------------------------------------------------------
+  jpl              = 6               !  number ice categories
+  nlay_i           =  5              !  number of ice  layers
+  nlay_s           =   3             !  number of snow layer
+  !cn_icerst_in = "ORCA2_00000384_ens_ice_step24"   !  suffix of ice restart name (input)
+  !cn_icerst_out = "ens_ice_step25"   !  suffix of ice restart name (output)
+  !cn_icerst_indir = "./restart_step24"             !  directory to read   input ice restarts
+  !cn_icerst_outdir = "./restart_step25"             !  directory to write output ice restarts
+
 /
 !------------------------------------------------------------------------------
 &namitd         !   Ice discretization
 !------------------------------------------------------------------------------
+   ln_cat_hfn       = .false.          !  ice categories are defined by a function following rn_himean**(-0.05)
+      rn_himean     =   2.0           !  expected domain-average ice thickness (m)
+   ln_cat_usr       = .true.         !  ice categories are defined by rn_catbnd below (m)
+      rn_catbnd     =   0.,0.3,0.6,1.1,2.1,3.7,6.0
+
 /
 !------------------------------------------------------------------------------
 &namdyn         !   Ice dynamics
@@ -69,6 +82,11 @@
 !------------------------------------------------------------------------------
 &namthd_pnd     !   Melt ponds
 !------------------------------------------------------------------------------
+  rn_apnd_max    =  0.5          !  maximum meltwater fraction contributing to pond growth (TOPO and LEV)
+  !
+  ln_pnd_TOPO       = .true.     !  topographic melt ponds
+  ln_pnd_LEV        = .false.      !  level ice melt ponds
+
 /
 !------------------------------------------------------------------------------
 &namini         !   Ice initialization
