@@ -18,11 +18,15 @@
 !-----------------------------------------------------------------------
    cn_exp      =  "ORCA1"  !  experience name
    nn_it000    =       1   !  first time step
-   nn_itend    =    350400   !  last  time step (std 5475)
+   nn_itend    =    17250 !175200   !  last  time step (std 5475)
    nn_istate   =       0   !  output the initial state (1) or not (0)
-   nn_date0    =   19800101
-   cn_ocerst_out = "orca1_sp_end"   !  suffix of ocean restart
-   cn_ocerst_outdir = "./orca1_spinup_end"      !  directory for output restarts
+   nn_date0    =   19980101
+   ln_rstart   = .false.   !  start from rest (F) or from a restart file (T)
+   cn_ocerst_in  = "TRA_10001231_restart"
+   cn_ocerst_indir  = "."
+   cn_ocerst_out = "shortrunforiceinit"!"orca1_sp_end"   !  suffix of ocean restart
+   cn_ocerst_outdir = "." !"./orca1_spinup_end"      !  directory for output restarts
+   ln_xios_read = .false.  !  use XIOS to read restart file (only for a single file restart)
 /
 !-----------------------------------------------------------------------
 &namdom        !   time and space domain
