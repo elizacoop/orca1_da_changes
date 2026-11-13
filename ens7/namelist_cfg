@@ -18,15 +18,15 @@
 !-----------------------------------------------------------------------
    cn_exp      =  "ORCA1"  !  experience name
    nn_it000    =       1   !  first time step
-   nn_itend = 105168  !  last  time step (std 5475)
+   nn_itend = 70128  !  last  time step (std 5475)
    nn_istate   =       0   !  output the initial state (1) or not (0)
-   nn_date0 =  20100101
+   nn_date0 =  20160101
    nn_leapy    =       1   !  Leap year calendar (1) or not (0)
    ln_rstart   = .true.   !  start from rest (F) or from a restart file (T)
-   cn_ocerst_in = "ORCA1_00035040_orca1_enssp_end"
-   cn_ocerst_indir = "./orca1_ensspinup_end"
-   cn_ocerst_out = "ens_end2015"   !  suffix of ocean restart
-   cn_ocerst_outdir = "./restart_end2015"      !  directory for output restarts
+   cn_ocerst_out = "ens_end2019"
+   cn_ocerst_outdir = "./restart_end2019"
+   cn_ocerst_in = "ORCA1_00105168_ens_end2015"   !  suffix of ocean restart
+   cn_ocerst_indir = "./restart_end2015"      !  directory for output restarts
    !ln_xios_read = .false.  !  use XIOS to read restart file (only for a single file restart)
 /
 !-----------------------------------------------------------------------

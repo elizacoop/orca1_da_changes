@@ -3,7 +3,7 @@
 set -euo pipefail
 
 START=2
-END=18
+END=17
 
 
 
